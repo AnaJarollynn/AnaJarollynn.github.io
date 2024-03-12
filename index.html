@@ -5,46 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Ana Carolina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             padding-top: 56px;
+            font-family: LouisGeorgeCafe;
+        }
+        @font-face { font-family: CopyDuck; src: url("Informacoes/Copyduck.ttf"); }
+        @font-face { font-family: LouisGeorgeCafe; src: url("Informacoes/Louis\ George\ Cafe.ttf"); } 
+        #Nome-Blog {
+            font-family: CopyDuck;
+            font-size: 30px;
+            color:black;
+            text-shadow: 2px 2px 2px rgb(45, 45, 45,0.3);
+        }
+        #barraNavegacao {
+            animation: none;
+        }
+        #descricaoSlide{
+            font-size: large;
+            text-shadow: 2px 2px 2px rgb(45, 45, 45);
+        }
+        #tituloSlide{
+            font-size: 30px;
+            text-shadow: 2px 2px 2px rgb(45, 45, 45);
+            -webkit-text-stroke: 1px white;
+            
         }
     </style>
+    <link href="Blog.css">
 </head>
 <body class="bg-dark">
-    <header class="navbar navbar-expand-md navbar bg-warning-subtle fixed-top">
+    <header class="navbar navbar-expand-md navbar-light bg-warning-subtle fixed-top">
         <div class="container">
-            <a class="navbar-brand text-center" href="#">
-                <img src="Imgs/IconeSite.png" alt="iconeAna" width="70" height="70" class="rounded-circle border border-4 border-dark">
-                Blog da Ana Carolina 
+            <a id="Barra_Navegacao" name="Barra_Navegacao" class="navbar-brand text-center" href="#">
+                <img src="Imgs/IconeSite.png" alt="iconeAna" width="70" height="70" class="rounded-circle border border-4 border-dark me-2">
+                <span ID="Nome-Blog" class="fw-bold animate__animated animate__bounce" >Blog da Ana Carolina</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barraNavegacao" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="barraNavegacao">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#sobreMim">Sobre Mim</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#coisasQueGosto">Coisas que gosto</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#meuTrabalho">Meu Trabalho</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold animate__animated animate__fadeIn" href="#sobreMim">Sobre Mim</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold animate__animated animate__fadeIn" href="#coisasQueGosto">Coisas que gosto</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold animate__animated animate__fadeIn" href="#meuTrabalho">Meu Trabalho</a></li>
                 </ul>
             </div>
         </div>
     </header>
-
-    <main class="container mt-5 text-light">
+    <br>
+    <main id="textoMain" class="container mt-5 text-light">
         <section id="sobreMim">
-            <h2>Sobre Mim</h2>
+            <h2 class="text-center">Sobre Mim</h2>
             <p>Eu sou Ana Carolina, adoro vídeo-games, animes e séries. Gosto de programar e amo a área de TI de um modo geral, adoro aprender coisas novas e estou sempre tentando melhorar como pessoa.</p>
             <p>Amo ler, adoro escrever, estou focada em estudar e ir à Academia, estou estudando Front-End (HTML e CSS) e Back-End (Node.js e C#), estou amando descobrir coisas novas!</p>
             <P>Amo RPG de mesa e recentemente estou escrevendo uma campanha sobre pessoas caçando o sobrenatural e jogando com alguns amigos, fico feliz de conseguir reunir todos para jogar!</P>
         </section><br>
-        <section id="coisasQueGosto">
+        <section class="text-center" id="coisasQueGosto">
             <h2>Coisas que Gosto</h2>
             <p>Sobre jogos: Amo Mass Effect, Undertale, League of Legends, Dota 2, CS:GO, Minecraft com mods, Pokemon Unite e estou tentando ter tempo para jogar Death Stranding.</p>
             <P>Sobre animes, eu estou adorando Kimetsu no Yaiba, Jujutsu no Kaisen, Kaguya-sama, Solo Leveling, entre outros...</P>
         </section><br>
-        <section id="meuTrabalho">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Informacoes/league-of-legends-milio-3974478664.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 id="tituloSlide">League of Legends</h5>
+                  <p id="descricaoSlide">Este é o Milio, meu suporte favorito, tenho uma tatuagem dele</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Informacoes/imagem_2024-03-12_150520079.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 id="tituloSlide">JoJo Bizarre Adventures</h5>
+                  <p id="descricaoSlide">Jotaro Joestar é meu personagem favorito, mas não gosto do stan dele (apesar de ser útil)</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <iframe width="1900" height="500" src="https://www.youtube.com/embed/210R0ozmLwg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 id="tituloSlide">Minha música favorita recentemente</h5>
+                    <p id="descricaoSlide">Esta é a opening de um anime chamado 'Mashle'</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <section class="text-center" id="meuTrabalho">
             <h2>Meu Trabalho</h2>
             <p>Eu atualmente trabalho com suporte na área de TI em uma empresa de Logistica  chamada Online Applications, estou me esforçando para algum dia conseguir uma vaga como desenvolvedora. Mas reconheço que não possuo conhecimento o bastante e preciso estudar!</p>
             <P>Estou me esforçando ao máximo :)</P>
